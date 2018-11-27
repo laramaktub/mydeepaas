@@ -52,6 +52,8 @@ data_parser.add_argument('url',
                          required=False,
                          action="append")
 
+train_parser.add_argument('nepochs', help="Number of epochs for the training", type=str, dest="nepochs",  required=False)
+
 model_links = api.model('Location', {
     "rel": fields.String(required=True),
     "href": fields.Url(required=True)
