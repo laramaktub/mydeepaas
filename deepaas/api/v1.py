@@ -53,6 +53,7 @@ data_parser.add_argument('url',
                          action="append")
 
 train_parser.add_argument('nepochs', help="Number of epochs for the training", type=str, dest="nepochs",  required=False)
+train_parser.add_argument('bsize', help="Batch size", type=str, dest="bsize",  required=False)
 
 model_links = api.model('Location', {
     "rel": fields.String(required=True),
